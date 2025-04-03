@@ -4,8 +4,9 @@ from pydub import AudioSegment
 from pydub.utils import which
 import os
 
-# Set FFmpeg path for pydub
+# Set FFmpeg and ffprobe paths for pydub
 AudioSegment.converter = which("ffmpeg")
+AudioSegment.ffprobe = which("ffprobe")
 
 # Streamlit app title
 st.title("Audio Transcription App")
